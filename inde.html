@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla de Productos</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <button id="cargar-btn">Cargar Productos</button>
+  <table id="tabla-productos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Los datos se cargarán aquí dinámicamente -->
+    </tbody>
+  </table>
+
+  <script>
+    function cargarProductos() {
+      fetch('productos.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON.');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const jsonData = data.productos;
+          const tablaProductos = document.getElementById('tabla-productos');
+          const tbody = tablaProductos.querySelector('tbody');
+          
+          // Limpiar contenido existente
+          tbody.innerHTML = '';
+
+          // Agregar filas a la tabla
+          jsonData.forEach(producto => {
+            const fila = document.createElement('tr');
+            
+            const nombre = document.createElement('td');
+            nombre.textContent = producto.nombre;
+            fila.appendChild(nombre);
+            
+            const precio = document.createElement('td');
+            precio.textContent = producto.precio;
+            fila.appendChild(precio);
+            
+            const descripcion = document.createElement('td');
+            descripcion.textContent = producto.descripcion;
+            fila.appendChild(descripcion);
+            
+            const foto = document.createElement('td');
+            const imagen = document.createElement('img');
+            imagen.src = producto.foto;
+            foto.appendChild(imagen);
+            fila.appendChild(foto);
+            
+            tbody.appendChild(fila);
+          });
+        })
+        .catch(error => {
+          console.error('Error al leer el archivo JSON:', error);
+        });
+    }
+
+    const cargarBtn = document.getElementById('cargar-btn');
+    cargarBtn.addEventListener('click', cargarProductos);
+  </script>
+</body>
+</html>

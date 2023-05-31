@@ -1,0 +1,39 @@
+[
+    {
+      "nombre": "Producto 1",
+      "precio": 10,
+      "descripcion": "Descripción del producto 1",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    },
+    {
+      "nombre": "Producto 2",
+      "precio": 20,
+      "descripcion": "Descripción del producto 2",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    },
+    {
+      "nombre": "Producto 3",
+      "precio": 30,
+      "descripcion": "Descripción del producto 3",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    },
+    {
+      "nombre": "Producto 4",
+      "precio": 40,
+      "descripcion": "Descripción del producto 4",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    },
+    {
+      "nombre": "Producto 5",
+      "precio": 50,
+      "descripcion": "Descripción del producto 5",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    },
+    {
+      "nombre": "Producto 6",
+      "precio": 60,
+      "descripcion": "Descripción del producto 6",
+      "foto": "https://th.bing.com/th/id/R.5001b8054bab6aa7292490d07932bcb1?rik=0TowBQCXT6hyMw&pid=ImgRaw&r=0"
+    }
+  ]
+  
